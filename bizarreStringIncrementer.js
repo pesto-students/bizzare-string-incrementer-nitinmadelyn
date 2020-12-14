@@ -23,7 +23,7 @@ const bizarreStringIncrementer = (inputString) => {
     if(noNumberFoundAtEnd === false){
         outputString = inputString.substr(0, inputString.length - numberFound.length) + ((parseInt(numberFound.join(""))+1).pad(numberFound.length)).toString()
     }
-    console.log(outputString)
+    return outputString
 }
 
 //function to pad numbers with zero
@@ -33,12 +33,12 @@ Number.prototype.pad = function(size) {
     return s;
 }
 
-bizarreStringIncrementer("foo");
-bizarreStringIncrementer("foo23");
-bizarreStringIncrementer("foo0041");
-bizarreStringIncrementer("foo9");
-bizarreStringIncrementer("foo099");
-bizarreStringIncrementer("f99oo");
-bizarreStringIncrementer("f99oo23");
-bizarreStringIncrementer("f99oo099");
-bizarreStringIncrementer("f99oo0099");
+console.log(bizarreStringIncrementer("foo"));
+console.log(bizarreStringIncrementer("foo23"));
+console.log(bizarreStringIncrementer("foo0041"));
+console.log(bizarreStringIncrementer("foo9"));
+console.log(bizarreStringIncrementer("foo099"));
+console.log(bizarreStringIncrementer("f99oo"));
+console.log(bizarreStringIncrementer("f99oo23"));
+console.log(bizarreStringIncrementer("f99oo099"));
+console.log(bizarreStringIncrementer("f99oo0099"));
